@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Discord Bot 総合管理コンソール</title>
+    <title>Discord Bot 総合管理ダッシュボード</title>
     <style>
         body { font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 20px; margin: 0; }
         h1 { color: #38bdf8; text-align: center; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px: #334155; }
+        .card { background: #1e293b; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #334155; }
         h3 { margin-top: 0; color: #38bdf8; border-bottom: 2px solid #334155; padding-bottom: 8px; }
         input, select, button { width: 100%; padding: 12px; margin: 8px 0; font-size: 15px; background: #0f172a; color: white; border: 1px solid #475569; border-radius: 6px; box-sizing: border-box; }
         button { background: #6366f1; border: none; cursor: pointer; font-weight: bold; transition: 0.2s; }
@@ -23,7 +23,6 @@
     <h1>🚀 Discord Bot 総合管理ダッシュボード</h1>
 
     <div class="grid">
-        <!-- 1. ユーザー管理・ブラックリスト -->
         <div class="card">
             <h3>🚫 ブラックリスト管理</h3>
             <p>ボットを使えなくするユーザーのIDを指定</p>
@@ -32,7 +31,6 @@
             <button class="success" onclick="removeBlacklist()">ブラックリストから解除</button>
         </div>
 
-        <!-- 2. ボットの遠隔操作 -->
         <div class="card">
             <h3>⚙️ ボット本体の制御</h3>
             <p>ボットの動作をリモートで切り替え</p>
@@ -41,7 +39,6 @@
             <button onclick="botAction('status_check')">📊 ステータス確認</button>
         </div>
 
-        <!-- 3. アナウンス・一斉送信 -->
         <div class="card">
             <h3>📢 サーバー一斉操作</h3>
             <p>全導入サーバーにメッセージを送信</p>
@@ -49,7 +46,6 @@
             <button onclick="sendBroadcast()">一斉送信を実行</button>
         </div>
 
-        <!-- 4. リアルタイムログ監視 -->
         <div class="card">
             <h3>🖥️ リアルタイム操作ログ</h3>
             <div class="log-box" id="logArea">
